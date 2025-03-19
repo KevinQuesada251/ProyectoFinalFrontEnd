@@ -1,5 +1,32 @@
 {
-    "users":[
-        
-    ]
+  "users": [
+    {
+      "id": "9d05",
+      "nombre": "Kevin",
+      "rol": "admin",
+      "email": "kevin14@gmail.com",
+      "pass": "1234"
+    },
+    {
+      "id": "8702",
+      "nombre": "A",
+      "rol": "B",
+      "email": "C",
+      "pass": "D"
+    }
+  ],
+  "games": [
+    {
+      "id": "112",
+      "nombreJuego": "GTA VI",
+      "precio": "$50",
+      "stock": "3500"
+    },
+    {
+      "id": "988a",
+      "nombreJuego": "Hollow Knight",
+      "precio": "$35",
+      "stock": "2500"
+    }
+  ]
 }

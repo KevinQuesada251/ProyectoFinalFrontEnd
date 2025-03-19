@@ -1,0 +1,12 @@
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.redesSociales{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 20px;
+}

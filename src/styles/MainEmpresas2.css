@@ -1,0 +1,44 @@
+.ContainerEmpresas2{
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: white;
+}
+.left2{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: #10102D;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    justify-content: center;
+}
+.right2{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: #10102D;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    justify-content: center;
+}
+.GreenLavaLogo{
+    width: 450px;
+    height: 400px;
+    padding-top: 40px;
+}
+.btnEmpresa2{
+    width: 80px;
+    height: 50px;
+    background-color: #FF0F7B;
+    color: white;
+    border-radius: 20px;
+}
+.tituloEmpresa2{
+    color: #FF0F7B;
+}
+.textoEmpresa2{
+    width: 400px;
+}

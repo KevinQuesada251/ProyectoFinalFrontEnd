@@ -1,15 +1,14 @@
 import React from 'react'
-
 import NavBar from '../components/NavBar'
-import MainHome from '../components/MainHome'
+import MainForo from '../components/MainForo'
 
-function Home() {
+function Foro() {
   return (
     <div>
         <NavBar />
-        <MainHome />
+        <MainForo />
     </div>
   )
 }
 
-export default Home
+export default Foro
