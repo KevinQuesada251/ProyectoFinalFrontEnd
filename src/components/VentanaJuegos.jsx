@@ -32,6 +32,7 @@ function VentanaJuegos() {
             <input id="nombreJuego"  placeholder="Nombre" ><br>
             <input id="precio"  placeholder="Precio"><br>
             <input id="stock"  placeholder="Stock" ><br>
+            <input type="checkbox" placeholder="hola">
           `,
           focusConfirm: false,
           preConfirm: () => {
@@ -87,6 +88,7 @@ function VentanaJuegos() {
         {listaJuegos.map((juego)=>{
             return(
                 <Card style={{ width: '18rem' }}>
+                  <Card.Img variant="top" src={juego.img} />
                 <Card.Body>
                   <CardTitle>Nombre: {juego.nombreJuego}</CardTitle>
                   <Card.Title>Precio: {juego.precio}</Card.Title>
