@@ -15,7 +15,6 @@ function FormLogin() {
     console.log(usuarios);
     const encontrado = usuarios.find(usuario => usuario.nombre == nombreUsuario && usuario.pass === passUsuario)
 
-    console.log(encontrado,encontrado.rol === "usuario");
     if (encontrado && encontrado.rol === "usuario") {
       console.log("Bienvenido");
       setNombreUsuario("")
