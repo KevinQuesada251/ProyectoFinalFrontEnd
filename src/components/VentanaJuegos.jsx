@@ -67,6 +67,7 @@ function VentanaJuegos() {
               <CardTitle>Nombre: {juego.nombreJuego}</CardTitle>
               <Card.Title>Precio: {juego.precio}</Card.Title>
               <Card.Title>Stock: {juego.stock}</Card.Title>
+              <Card.Title>Categoría: {juego.categoria}</Card.Title>
               <Button onClick={() => editar(juego.id)} variant="primary">Editar</Button>
               <Button onClick={() => eliminar(juego.id)} variant='primary'>Eliminar</Button>
             </Card.Body>

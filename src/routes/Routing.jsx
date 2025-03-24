@@ -12,6 +12,7 @@ import Register from '../pages/Register';
 import Foro from '../pages/Foro';
 import AcercaNosotros from '../pages/AcercaNosotros';
 import Admin from '../pages/Admin'; 
+import PerfilUsuario from '../pages/PerfilUsuario';
 
 
 function Routing() {
@@ -32,6 +33,7 @@ function Routing() {
                             <Route path="/foro" element={<Foro/>}/>
                             <Route path="/acerca" element={<AcercaNosotros/>}/>
                             <Route path="/admin" element={<Admin/>}/>
+                            <Route path="/perfil" element={<PerfilUsuario/>}/>
                             
 
                       

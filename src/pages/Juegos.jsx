@@ -3,7 +3,6 @@ import NavBar from '../components/NavBar'
 import MainJuegos from '../components/MainJuegos'
 import Footer from '../components/Footer'
 import CardJuegos from '../components/CardJuegos'
-import DropdownJuegos from '../components/DropdownJuegos'
 import "../styles/juegosCards.css"
 
 function Juegos() {
@@ -11,7 +10,6 @@ function Juegos() {
     <div>
         <NavBar />
         <MainJuegos />
-        <DropdownJuegos/> 
         <CardJuegos/>
         <Footer />
 

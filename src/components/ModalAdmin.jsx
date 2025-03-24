@@ -11,34 +11,36 @@ function ModalAdmin() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [img,setImg]= useState(null)
-  const [nombre,setNombre]= useState("")
-  const [precio,setPrecio]= useState("")
-  const [stock,setStock]= useState("")
+  const [img, setImg] = useState(null)
+  const [nombre, setNombre] = useState("")
+  const [precio, setPrecio] = useState("")
+  const [stock, setStock] = useState("")
+  const [categoria, setCategoria]= useState("")
 
-async function Agregar() {
-    const obj ={
-        "img":img,
-        "nombreJuego": nombre,
-        "precio":precio,
-        "stock":stock
+  async function Agregar() {
+    const obj = {
+      "img": img,
+      "nombreJuego": nombre,
+      "precio": precio,
+      "stock": stock,
+      "categoria":categoria
     }
-   await Llamados.postData(obj,"games")
-   console.log("se envio exitosamente");
-   
-}
+    await Llamados.postData(obj, "games")
+    console.log("se envio exitosamente");
 
-function subirImagen(evento) {
+  }
+
+  function subirImagen(evento) {
     const archivo = evento.target.files[0]
-    if(archivo){
-        const lector = new FileReader()
-        lector.onloadend = ()=>{
-            setImg(lector.result)
-        }
-        lector.readAsDataURL(archivo) 
-           
+    if (archivo) {
+      const lector = new FileReader()
+      lector.onloadend = () => {
+        setImg(lector.result)
+      }
+      lector.readAsDataURL(archivo)
+
     }
-}
+  }
 
   return (
     <>
@@ -57,23 +59,31 @@ function subirImagen(evento) {
                 type="file" onChange={subirImagen}
               />
             </Form.Group>
+            <Form.Group>
+              <select name="" id="" onChange={(e)=>setCategoria(e.target.value)}>
+                <option>Categorias</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Mundo Abierto">Mundo Abierto</option>
+                <option value="Accion">Acción</option>
+                </select>
+            </Form.Group>
             <FormGroup>
-                <Form.Label>Nombre del juego</Form.Label>
-                <Form.Control
-                type='text' onChange={(e)=>setNombre(e.target.value)}>
-                </Form.Control>
+              <Form.Label>Nombre del juego</Form.Label>
+              <Form.Control
+                type='text' onChange={(e) => setNombre(e.target.value)}>
+              </Form.Control>
             </FormGroup>
             <FormGroup>
-                <Form.Label>Precio</Form.Label>
-                <Form.Control
-                type='text' onChange={(e)=>setPrecio(e.target.value)}>
-                </Form.Control>
+              <Form.Label>Precio</Form.Label>
+              <Form.Control
+                type='text' onChange={(e) => setPrecio(e.target.value)}>
+              </Form.Control>
             </FormGroup>
             <FormGroup>
-                <Form.Label>Stock</Form.Label>
-                <Form.Control
-                type='text' onChange={(e)=>setStock(e.target.value)}>
-                </Form.Control>
+              <Form.Label>Stock</Form.Label>
+              <Form.Control
+                type='text' onChange={(e) => setStock(e.target.value)}>
+              </Form.Control>
             </FormGroup>
           </Form>
         </Modal.Body>
