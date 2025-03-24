@@ -6,6 +6,7 @@ import ModalAdmin from '../components/ModalAdmin'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import "../styles/Admin.css"
 
 
 
@@ -23,10 +24,10 @@ function Admin() {
         <Col><h1>Administrador</h1></Col>
       </Row>
       <Row>
-        <Col>
+        <Col className='side' >
           <Sidebar juegos={() => setMostrar(false)} usuarios={() => setMostrar(true)} />
         </Col>
-        <Col>{mostrar &&
+        <Col className='ventanas'>{mostrar &&
           <VentanaUsuarios />
         }
           {mostrar === false &&

@@ -2,21 +2,38 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 import "../styles/card.css"
+import Llamados from '../services/Llamados';
+import { useEffect,useState } from 'react';
 
 
 
 function CardJuegos({titulo="KK",descripcion,imagen,enlace}) {
+
+  const [listaJuegos,setListaJuegos]= useState([])
+  useEffect(()=>{
+    async function traerInfo() {
+      const juegos = await Llamados.getData("games")
+      setListaJuegos(juegos)
+    }
+    traerInfo()
+  },[])
+  
   return (
-    <Card className='card' style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={imagen}/>
-      <Card.Body>
-        <Card.Title>{titulo}</Card.Title>
-        <Card.Text>
-          {descripcion}
-        </Card.Text>
-        <Button className='btnCard' variant="primary"><Link className='textoCard' to={enlace} target='_blank'>Ir a steam</Link></Button>
-      </Card.Body>
-    </Card>
+
+    <div className='containerCardJuegos'>
+      {listaJuegos.map((juego)=>{
+        return(
+        <Card style={{ width: '18rem' }}>
+        <Card.Img style={{height:'12rem'}} variant="top" src={juego.img} />
+        <Card.Body>
+          <Card.Title>{juego.nombreJuego}</Card.Title>
+          <Card.Title>Precio: {juego.precio}</Card.Title>
+        </Card.Body>
+      </Card>
+        )
+      })}
+  
+    </div>
   );
 }
 

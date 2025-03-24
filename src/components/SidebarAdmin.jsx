@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Sidebar, Menu, MenuItem } from 'react-pro-sidebar';
 import Llamados from '../services/Llamados';
 import { useEffect } from 'react';
+import "../styles/sidebar.css"
 
 function SidebarAdmin({usuarios,juegos}) {
 
@@ -17,17 +18,17 @@ useEffect=>(()=>{
     }
 },[])
    function cerrarSesion() {
-    navigate("/login")
+    navigate("/")
    }
     return (
         <div>
-            <Sidebar>
+            <Sidebar className='containerSideBar'>
                 <Menu>
                     <MenuItem onClick={usuarios}>Usuarios</MenuItem>
                     <MenuItem onClick={juegos}>Juegos</MenuItem>
                     <MenuItem onClick={cerrarSesion}>Cerrar Sesion</MenuItem>
                 </Menu>
-            </Sidebar>;
+            </Sidebar>
         </div>
     )
 }

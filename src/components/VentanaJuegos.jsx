@@ -58,11 +58,11 @@ function VentanaJuegos() {
   
 
   return (
-    <div>
+    <div className='containerVentanaJue'>
       {listaJuegos.map((juego) => {
         return (
           <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={juego.img} />
+            <Card.Img style={{height:'12rem'}} variant="top" src={juego.img} />
             <Card.Body>
               <CardTitle>Nombre: {juego.nombreJuego}</CardTitle>
               <Card.Title>Precio: {juego.precio}</Card.Title>

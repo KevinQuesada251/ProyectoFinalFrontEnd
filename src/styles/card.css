@@ -9,3 +9,11 @@
     color: white;
     text-decoration: none;
 }
+.containerCardJuegos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 30px;
+    background-color: #10102D;
+    
+}

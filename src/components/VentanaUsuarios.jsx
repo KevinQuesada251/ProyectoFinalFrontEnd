@@ -59,7 +59,7 @@ function VentanaUsuarios() {
     }
     
   return (
-    <div>
+    <div className='containerVentanaUsu'>
         {listaUsuarios.map((usuario)=>{
             return(
                 <Card style={{ width: '18rem' }}>

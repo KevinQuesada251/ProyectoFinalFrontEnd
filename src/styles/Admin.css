@@ -1,5 +1,14 @@
 .containerAdmin{
     width: 100%;
-    height: auto;
+    height: 1000px;
     background-color: red;
+}
+.ventanas{
+    width: 100%;
+    display: flex;
+    background-color: brown;
+}
+.side{
+    width: 30%;
+    background-color: blue;
 }
