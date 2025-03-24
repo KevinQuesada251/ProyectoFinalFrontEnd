@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Llamados from '../services/Llamados'
 import Swal from 'sweetalert2'
+import "../styles/Login.css"
 
 function FormLogin() {
 
@@ -41,14 +42,15 @@ function FormLogin() {
 
   return (
     <div>
-      <div className='containerLogin'></div>
+      <div className='containerLogin'>
       <h1>Iniciar Sesión</h1>
-      <p>¿Es tu primera vez? <Link to="/register">Regístrate</Link></p>
-      <label htmlFor="">Nombre de Usuario</label>
-      <input value={nombreUsuario} onChange={(e)=>setNombreUsuario(e.target.value)} type="text" />
-      <label htmlFor="">Contraseña</label>
-      <input value={passUsuario} onChange={(e)=>setPassUsuario(e.target.value)} type="password" name="" id="" />
+      <p>¿Es tu primera vez? <Link to="/register">Regístrate</Link></p> <br />
+      <label htmlFor="">Nombre de Usuario</label><br />
+      <input value={nombreUsuario} onChange={(e)=>setNombreUsuario(e.target.value)} type="text" /> <br />
+      <label htmlFor="">Contraseña</label> <br />
+      <input value={passUsuario} onChange={(e)=>setPassUsuario(e.target.value)} type="password" name="" id="" /> <br />
       <button onClick={IniciarSesion}>Iniciar</button>
+      </div>
     </div>
   )
 }

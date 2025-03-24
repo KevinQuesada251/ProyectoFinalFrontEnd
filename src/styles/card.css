@@ -17,3 +17,7 @@
     background-color: #10102D;
     
 }
+
+.card:hover{
+    transform: scale(1.1);
+}

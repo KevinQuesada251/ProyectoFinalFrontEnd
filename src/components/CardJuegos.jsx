@@ -7,7 +7,7 @@ import { useEffect,useState } from 'react';
 
 
 
-function CardJuegos({titulo="KK",descripcion,imagen,enlace}) {
+function CardJuegos() {
 
   const [listaJuegos,setListaJuegos]= useState([])
   useEffect(()=>{
@@ -21,8 +21,7 @@ function CardJuegos({titulo="KK",descripcion,imagen,enlace}) {
   return (
 
     <div className='containerCardJuegos'>
-      {listaJuegos.map((juego)=>{
-        return(
+      {listaJuegos.map((juego)=>(
         <Card style={{ width: '18rem' }}>
         <Card.Img style={{height:'12rem'}} variant="top" src={juego.img} />
         <Card.Body>
@@ -30,8 +29,7 @@ function CardJuegos({titulo="KK",descripcion,imagen,enlace}) {
           <Card.Title>Precio: {juego.precio}</Card.Title>
         </Card.Body>
       </Card>
-        )
-      })}
+      ))}
   
     </div>
   );
