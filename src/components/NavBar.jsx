@@ -16,7 +16,16 @@ function NavBar() {
                 <li><Link className='navMenu'  to="/juegos">juegos</Link></li>
                 <li><Link className='navMenu'  to="/foro">Foro</Link></li>
                 <li><Link className='navMenu' to="/acerca">Acerca de Nosotros</Link></li>
-                <li><Link className='navMenu'  to="/login"><img className='usuario' src="src/assets/img/usuario.png" alt="" /></Link></li>
+                {localStorage.getItem("idUsuario") &&(
+                  <>
+                  <li><Link className='navMenu'  to="/perfil"><img className='usuario' src="src/assets/img/usuario.png" alt="" /></Link></li>
+                  </>
+                )}
+                <>
+                {!localStorage.getItem("idUsuario") &&(
+                  <li><Link className='navMenu'  to="/"><img className='usuario' src="src/assets/img/usuario.png" alt="" /></Link></li>
+                                )}
+                  </>
             </ul>
         </nav>
     </div>

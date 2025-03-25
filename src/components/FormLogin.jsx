@@ -26,7 +26,8 @@ function FormLogin() {
         icon: "success"
       });
       localStorage.setItem("idUsuario",encontrado.id)
-      navigate("/foro")
+      localStorage.setItem("NombreUsuario",encontrado.nombre)
+      navigate("/perfil")
     }else if(encontrado && encontrado.rol === "admin"){
       Swal.fire({
         title: "Bienvenido Administrador",

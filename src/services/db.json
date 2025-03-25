@@ -39,6 +39,14 @@
       "precio": "12",
       "stock": "123",
       "categoria": "Aventura"
+    },
+    {
+      "id": "8249",
+      "img": null,
+      "nombreJuego": "Tomb Rider",
+      "precio": "20",
+      "stock": "200",
+      "categoria": "Accion"
     }
   ],
   "listaDeseados": [
@@ -47,6 +55,36 @@
       "juegoID": "e3e1",
       "usuarioID": "29",
       "juegoNombre": "Metal Gear Solid V"
+    },
+    {
+      "id": "4773",
+      "juegoID": "e3e1",
+      "usuarioID": "29",
+      "juegoNombre": "Metal Gear Solid V"
+    },
+    {
+      "id": "cfe5",
+      "juegoID": "54cd",
+      "usuarioID": "29",
+      "juegoNombre": "hola"
+    },
+    {
+      "id": "434b",
+      "juegoID": "f6e7",
+      "usuarioID": "29",
+      "juegoNombre": "NFS"
+    },
+    {
+      "id": "6f4a",
+      "juegoID": "e3e1",
+      "usuarioID": "29",
+      "juegoNombre": "Metal Gear Solid V"
+    },
+    {
+      "id": "34e0",
+      "juegoID": "f6e7",
+      "usuarioID": "29",
+      "juegoNombre": "NFS"
     }
   ]
 }

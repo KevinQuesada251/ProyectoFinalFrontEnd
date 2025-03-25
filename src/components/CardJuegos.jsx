@@ -43,7 +43,7 @@ function CardJuegos() {
     <div>
       <select name="" id="" onChange={(e) => setCategoria(e.target.value)}>
         <option value="">Todos</option>
-        <option value="Acción">Acción</option>
+        <option value="Accion">Acción</option>Ñ
         <option value="Aventura">Aventura</option>
         <option value="Mundo Abierto">Mundo Abierto</option>
       </select>
