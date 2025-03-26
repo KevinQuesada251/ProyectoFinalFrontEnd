@@ -1,6 +1,6 @@
-async function getData(endpoint) {
+async function getData(endpoint,id="") {
     try {
-        const response = await fetch(`http://localhost:3000/${endpoint}`, {
+        const response = await fetch(`http://localhost:3000/${endpoint}/${id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -39,14 +39,16 @@ async function patchData(obj,endpoint,id)
 {
 
     try {
-        const response = await fetch(`http://localhost:3000/${endpoint}/`+id, {
+        const response = await fetch(`http://localhost:3000/${endpoint}/${id}`,{
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(obj)
         });
-        return await response.json();
+        const datos = await response.json()
+        console.log(datos);
+        
     } catch (error) {
         console.error('Error update user:', error);
         throw error;

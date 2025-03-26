@@ -27,6 +27,9 @@ function ModalAdmin() {
     }
     await Llamados.postData(obj, "games")
     console.log("se envio exitosamente");
+    setNombre("")
+    setPrecio("")
+    setStock("")
 
   }
 

@@ -1,0 +1,25 @@
+.containerPerfil{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: brown;
+}
+.banner{
+    width: 100%;
+    height: 300px;
+    background-color: aqua;
+}
+.fotoPerfil{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+}
+.icono-lapicito{
+    position: relative;
+    top: 17vh;
+    color: #ffff;
+    font-size:30px;
+}

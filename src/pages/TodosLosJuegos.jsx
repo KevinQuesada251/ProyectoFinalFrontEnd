@@ -6,7 +6,7 @@ import "../styles/perfil.css"
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-function PerfilUsuario() {
+function TodosLosJuegos() {
   const [listaDeseados,setListaDeseados] = useState([])
   const [mostrar,setMostrar] = useState(false)
   const [show, setShow] = useState(false);
@@ -43,7 +43,7 @@ function PerfilUsuario() {
         banner: imgBanner,
         perfil: imgPerfil
       }
-      await Llamados.patchData(enviarImgs,"users",id)
+      await Llamados.patchData(enviarImgs,"games",id)
       handleClose()
     }
 
@@ -109,4 +109,4 @@ function PerfilUsuario() {
   )
 }
 
-export default PerfilUsuario
+export default TodosLosJuegos
