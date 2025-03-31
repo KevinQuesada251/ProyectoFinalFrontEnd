@@ -1,0 +1,3 @@
+Mi proyecto se trata de una pagina de videojuego indie y tiene una parte para hacer una cuenta y tener un perfil con banner y foto, los juegos también tiene una perfil donde los usuarios pueden comentar, el admi puede agregar juegos nuevos y administrar los usuarios en la parte de juegos también hay un filtro que muestro los juegos por categoría, también en la página de contacto pueden enviar un correo directo a mi, use renderizado condicional para mostrar opciones.
+
+Dependencias react boostrap,json-server,react pro side bar,EmailJS, SweetAlert2
