@@ -15,3 +15,8 @@
     top: 40%;
     left: 50%;
 }
+.tituloContacto{
+    position: relative;
+    left: 130px;
+    bottom: 10px;
+}

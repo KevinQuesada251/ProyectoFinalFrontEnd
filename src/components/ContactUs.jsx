@@ -37,8 +37,8 @@ export const ContactUs = () => {
 
   return (
     <div className='FormContact'>
-      <h2>Contacto</h2>
-      <form ref={form} onSubmit={sendEmail} className='Field'>
+      <h2 className='tituloContacto'>Contacto</h2> 
+       <form ref={form} onSubmit={sendEmail} className='Field'><br />
         <label>Name</label><br />
         <input value={name} type="text" name="user_name" onChange={(e) => setName(e.target.value)} /> <br />
         <label>Email</label><br />

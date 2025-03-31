@@ -24,8 +24,19 @@ function VentanaJuegos() {
   */
 
   function eliminar(id) {
-    Llamados.deleteData("games", id)
-    setRecarga(!recarga)
+    Swal.fire({
+      title: "Quieres eliminar el registro",
+      showDenyButton: false,
+      showCancelButton: true,
+      confirmButtonText: "Save",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Eliminado exitoso");
+        Llamados.deleteData("games", id)
+        setRecarga(!recarga)
+      } 
+    });
+    
   }
 /*Funcion editar, despliega un sweet alert donde puedo  */
   async function editar(id) {

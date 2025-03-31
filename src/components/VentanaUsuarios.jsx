@@ -20,8 +20,20 @@ function VentanaUsuarios() {
     },[recarga])
 
     function eliminar(id) {
-        Llamados.deleteData("users",id)
-        setRecarga(!recarga)
+      Swal.fire({
+        title: "Quieres eliminar el registro",
+        showDenyButton: false,
+        showCancelButton: true,
+        confirmButtonText: "Eliminar",
+        denyButtonText: `Cancelar`
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire("Eliminado Exitoso!");
+          Llamados.deleteData("users",id)
+          setRecarga(!recarga)
+        } 
+      });
+       
     }
 
     async function editar(id){

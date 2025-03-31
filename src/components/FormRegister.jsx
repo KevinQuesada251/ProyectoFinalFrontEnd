@@ -38,6 +38,7 @@ function FormRegister() {
     <div>
         <>
   <form className="form">
+    <h5 className='tituloRegi'>Register</h5>
     <input className="input" onChange={(evento) => setNombre(evento.target.value)}  type="text" placeholder="Nombre" />
     <input className="input" onChange={(evento) => setEmail(evento.target.value)} type="text" placeholder="Email" />
     <input className='input' onChange={(evento) => setPass(evento.target.value)} type="text"  placeholder='Contraseña'/>
