@@ -21,7 +21,7 @@ function Admin() {
   return (
     <Container>
       <Row>
-        <Col><h1>Administrador</h1></Col>
+        <Col className='tituloAdmin'><h1>Administrador</h1></Col>
       </Row>
       <Row>
         <Col className='side' >

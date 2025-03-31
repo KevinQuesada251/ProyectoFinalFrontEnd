@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Llamados from '../services/Llamados'
 import { useNavigate } from 'react-router-dom'
+import "../styles/register.css"
 
 function FormRegister() {
 
@@ -35,15 +36,16 @@ function FormRegister() {
     }
   return (
     <div>
-        <div className='containerRegister'>
-            <label htmlFor="">Nombre</label>
-            <input onChange={(evento) => setNombre(evento.target.value)} type="text"  />
-            <label  htmlFor="">Email</label>
-            <input onChange={(evento) => setEmail(evento.target.value)} type="text"  />
-            <label htmlFor="">Contraseña</label>
-            <input onChange={(evento) => setPass(evento.target.value)}  type="password" />
-            <button onClick={guardar}>Registrar</button>
-        </div>
+        <>
+  <form className="form">
+    <input className="input" onChange={(evento) => setNombre(evento.target.value)}  type="text" placeholder="Nombre" />
+    <input className="input" onChange={(evento) => setEmail(evento.target.value)} type="text" placeholder="Email" />
+    <input className='input' onChange={(evento) => setPass(evento.target.value)} type="text"  placeholder='Contraseña'/>
+    <center>
+      <button onClick={guardar} className="button">Registrar</button>
+    </center>
+  </form>
+</>
     </div>
   )
 }

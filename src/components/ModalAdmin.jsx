@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FormControl, FormGroup, FormLabel } from 'react-bootstrap';
+import { FormControl, FormGroup, FormLabel, ModalTitle } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
@@ -12,10 +12,12 @@ function ModalAdmin() {
   const handleShow = () => setShow(true);
 
   const [img, setImg] = useState(null)
+  const [banner,setBanner]= useState(null)
   const [nombre, setNombre] = useState("")
   const [precio, setPrecio] = useState("")
   const [stock, setStock] = useState("")
   const [categoria, setCategoria]= useState("")
+
 
   async function Agregar() {
     const obj = {
@@ -23,7 +25,8 @@ function ModalAdmin() {
       "nombreJuego": nombre,
       "precio": precio,
       "stock": stock,
-      "categoria":categoria
+      "categoria":categoria,
+      "banner": banner
     }
     await Llamados.postData(obj, "games")
     console.log("se envio exitosamente");
@@ -45,6 +48,18 @@ function ModalAdmin() {
     }
   }
 
+  function subirBanner(evento) {
+    const archivo = evento.target.files[0]
+    if (archivo) {
+      const lector = new FileReader()
+      lector.onloadend = () => {
+        setBanner(lector.result)
+      }
+      lector.readAsDataURL(archivo)
+
+    }
+  }
+
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
@@ -58,11 +73,19 @@ function ModalAdmin() {
         <Modal.Body>
           <Form>
             <Form.Group>
+              <ModalTitle>Imagen de card</ModalTitle>
               <Form.Control
                 type="file" onChange={subirImagen}
               />
             </Form.Group>
             <Form.Group>
+            <ModalTitle>Imagen del Banner</ModalTitle>
+              <Form.Control
+                type="file" onChange={subirBanner}
+              />
+            </Form.Group>
+            <Form.Group>
+            <ModalTitle>Seleccione la categoria</ModalTitle>
               <select name="" id="" onChange={(e)=>setCategoria(e.target.value)}>
                 <option>Categorias</option>
                 <option value="Aventura">Aventura</option>

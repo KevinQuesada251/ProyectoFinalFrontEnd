@@ -14,17 +14,20 @@ function VentanaJuegos() {
   useEffect(() => {
     async function traerJuegos() {
       const juegos = await Llamados.getData("games")
-      console.log(juegos);
       setListaJuegos(juegos)
     }
     traerJuegos()
   }, [recarga])
 
+  /*
+    Función de eliminar, va al endpoint del que se quiere eliminar y con el id elimina solo ese elemento
+  */
+
   function eliminar(id) {
     Llamados.deleteData("games", id)
     setRecarga(!recarga)
   }
-
+/*Funcion editar, despliega un sweet alert donde puedo  */
   async function editar(id) {
 
     const { value: formValues } = await Swal.fire({
@@ -33,14 +36,20 @@ function VentanaJuegos() {
             <input id="nombreJuego"  placeholder="Nombre" ><br>
             <input id="precio"  placeholder="Precio"><br>
             <input id="stock"  placeholder="Stock" ><br>
-            <input type="checkbox">
+            <select id="categoria">
+            <option value="aventura">Aventura</option>
+            <option value="Accion">Accion</option>
+            <option value="Mundo Abierto">Mundo Abierto</option>
+            </select>
           `,
       focusConfirm: false,
       preConfirm: () => {
         return [
           document.getElementById("nombreJuego").value,
           document.getElementById("precio").value,
-          document.getElementById("stock").value
+          document.getElementById("stock").value,
+          document.getElementById("categoria").value
+
         ];
       }
     });
@@ -49,6 +58,7 @@ function VentanaJuegos() {
         "nombreJuego": document.getElementById("nombreJuego").value,
         "precio": document.getElementById("precio").value,
         "stock": document.getElementById("stock").value,
+        "categoria":document.getElementById("categoria").value
       }
       Llamados.patchData(obj, "games", id)
       setRecarga(!recarga)

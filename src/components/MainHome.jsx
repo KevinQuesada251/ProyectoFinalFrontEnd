@@ -9,7 +9,7 @@ function MainHome() {
     
 
     return (
-        <div classNameName='containerHome'>
+        <div className='containerHome'>
             <h2>Bienvenido</h2>
             <h1>TU SITIO DE JUEGOS INDIE</h1>
             <button onClick={()=>{navigate("/login")}} className="animated-button">

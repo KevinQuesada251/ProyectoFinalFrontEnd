@@ -6,9 +6,14 @@
 .ventanas{
     width: 100%;
     display: flex;
-    background-color: brown;
+    background-color: #10102D;
 }
 .side{
-    width: 30%;
-    background-color: blue;
+    width: 20%;
+    background-color: #10102D;
+}
+.tituloAdmin{
+    background-color: gray;
+    text-align: center;
+    color: brown;
 }

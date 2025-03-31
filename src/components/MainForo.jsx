@@ -6,8 +6,7 @@ function MainForo() {
     <div>
         <div className='containerForo'>
         <h1>Bienvenido al Foro</h1>
-          <p>Todas las categorias</p>
-          <p>Ultimo post</p>
+          <h2>Muy Pronto Disponible</h2>
         </div>
     </div>
   )

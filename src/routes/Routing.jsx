@@ -11,8 +11,10 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Foro from '../pages/Foro';
 import AcercaNosotros from '../pages/AcercaNosotros';
-import Admin from '../pages/Admin'; 
+import Admin from '../pages/Admin';
 import PerfilUsuario from '../pages/PerfilUsuario';
+import TodosLosJuegos from '../pages/TodosLosJuegos';
+import PrivateRoute from '../components/Private';
 
 
 function Routing() {
@@ -22,22 +24,23 @@ function Routing() {
     <div>
       <Router>
         <Routes>
-      
-                        
 
-                            <Route path="/" element={<Home/>}/>
-                            <Route path="/juegos" element={<Juegos/>}/>
-                            <Route path="/empresas" element={<Empresas/>}/>
-                            <Route path="/login" element={<Login/>}/>
-                            <Route path="/register" element={<Register/>}/>
-                            <Route path="/foro" element={<Foro/>}/>
-                            <Route path="/acerca" element={<AcercaNosotros/>}/>
-                            <Route path="/admin" element={<Admin/>}/>
-                            <Route path="/perfil" element={<PerfilUsuario/>}/>
-                            
 
-                      
-                            
+
+          <Route path="/" element={<Home />} />
+          <Route path="/juegos" element={<Juegos />} />
+          <Route path="/empresas" element={<Empresas />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/foro" element={<Foro />} />
+          <Route path="/acerca" element={<AcercaNosotros />} />
+          <Route path="/admin" element={<PrivateRoute element={<Admin />} />} />
+          <Route path="/perfil" element={<PerfilUsuario />} />
+          <Route path="/pagJuego" element={<TodosLosJuegos />} />
+
+
+
+
         </Routes>
       </Router>
     </div>

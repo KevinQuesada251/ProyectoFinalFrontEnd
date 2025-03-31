@@ -12,8 +12,7 @@ function FormLogin() {
 
   async function IniciarSesion() {
 
-    const usuarios = await Llamados.getData("users")
-    console.log(usuarios);
+    const usuarios = await Llamados.getData("users") /* metodo find para encontarar el usuario */
     const encontrado = usuarios.find(usuario => usuario.nombre == nombreUsuario && usuario.pass === passUsuario)
 
     if (encontrado && encontrado.rol === "usuario") {
@@ -27,14 +26,22 @@ function FormLogin() {
       });
       localStorage.setItem("idUsuario",encontrado.id)
       localStorage.setItem("NombreUsuario",encontrado.nombre)
+      localStorage.setItem("rol",encontrado.rol)
       navigate("/perfil")
     }else if(encontrado && encontrado.rol === "admin"){
+      navigate("/admin")
       Swal.fire({
         title: "Bienvenido Administrador",
         text: "Eres todo poderoso",
         icon: "success"
       });
-      navigate("/admin")
+      localStorage.setItem("rol",encontrado.rol)
+    }else{
+      Swal.fire({
+        title: "Usuario o Contraseña incorrecto",
+        text: "Escribe bien el usuario o contraseña",
+        icon: "error"
+      });
     }
     
     
